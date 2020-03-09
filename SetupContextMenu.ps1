@@ -111,7 +111,7 @@ $profiles | ForEach-Object {
 
     $configEntry = $config.profiles.$guid
 
-    if ($isHidden -eq $false) {
+    if (-not($isHidden -eq $true)) {
         [void](New-Item -Force -Path $subItemRegPath)
         [void](New-Item -Force -Path $subItemCMDPath)
 
